@@ -1,10 +1,23 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import { CommonModule } from './common/common.module';
+
+import { ConfigSchema } from './config'
+import { IssController } from './iss/iss.controller';
+import { IssModule } from './iss/iss.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({
+      ignoreEnvFile: process.env.NODE_ENV === 'production',
+      isGlobal: true,
+      validationSchema: ConfigSchema
+    }),
+    CommonModule,
+
+    IssModule
+  ],
+  controllers: [IssController],
+  providers: [],
 })
 export class AppModule {}
