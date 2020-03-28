@@ -1,9 +1,12 @@
-import { IsString } from 'class-validator';
+import { IsString, IsObject } from 'class-validator';
 
 export class CreateSubscriptionDto {
   @IsString()
   readonly token: string
 
   @IsString()
-  readonly message: string;
+  readonly deviceId: string
+
+  @IsObject()
+  readonly message: object;
 }

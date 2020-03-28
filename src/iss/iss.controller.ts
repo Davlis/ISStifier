@@ -9,7 +9,10 @@ export class IssController {
 
   @Post()
   async createSubscription(@Body() createSubscriptionDto: CreateSubscriptionDto): Promise<string> {
-    const { token, message } = createSubscriptionDto
+    const { token, deviceId, message } = createSubscriptionDto
+
+    console.log('token', token)
+    console.log('deviceId', deviceId)
 
     const response: string = await this.issService.createSubscription(token, message)
 
