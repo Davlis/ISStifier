@@ -1,4 +1,13 @@
-import { IsString, IsObject } from 'class-validator';
+import { Type } from 'class-transformer';
+import { IsString, IsObject, ValidateNested } from 'class-validator';
+
+class MessageDto {
+  @IsString()
+  body: string
+
+  @IsObject()
+  data: object
+}
 
 export class CreateSubscriptionDto {
   @IsString()
@@ -7,6 +16,7 @@ export class CreateSubscriptionDto {
   @IsString()
   readonly deviceId: string
 
-  @IsObject()
-  readonly message: object;
+  @ValidateNested()
+  @Type(() => MessageDto)
+  readonly message: MessageDto
 }

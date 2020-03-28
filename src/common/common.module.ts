@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
-import { NotifierService } from './notifier/notifier.service';
+import { FirebaseNotifierService } from './firebase-notifier/firebase-notifier.service';
+import { ExpoNotifierService } from './expo-notifier/expo-notifier.service';
 
 @Module({
-  providers: [NotifierService],
-  exports: [NotifierService],
+  providers: [FirebaseNotifierService, ExpoNotifierService],
+  exports: [FirebaseNotifierService, ExpoNotifierService],
 })
 export class CommonModule {}

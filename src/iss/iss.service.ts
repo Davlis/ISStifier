@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { NotifierService } from '../common/notifier/notifier.service';
+import { ExpoNotifierService as NotifierService } from '../common/expo-notifier/expo-notifier.service';
 
 @Injectable()
 export class IssService {

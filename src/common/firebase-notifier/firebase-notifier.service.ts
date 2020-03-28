@@ -3,12 +3,10 @@ import { ConfigService } from '@nestjs/config';
 
 import * as admin from 'firebase-admin';
 
-export interface IMessage {
-  [key: string]: string
-}
+import { IMessage } from './interfaces'
 
 @Injectable()
-export class NotifierService {
+export class FirebaseNotifierService {
   private SDKCredentials: any
 
   constructor(private configService: ConfigService) {
