@@ -3,6 +3,10 @@ import { ConfigService } from '@nestjs/config';
 
 import * as admin from 'firebase-admin';
 
+export interface IMessage {
+  [key: string]: string
+}
+
 @Injectable()
 export class NotifierService {
   private SDKCredentials: any
@@ -27,11 +31,9 @@ export class NotifierService {
   }
 
   // https://firebase.google.com/docs/cloud-messaging/send-message
-  async send(token: string, message: string) {
+  async send(token: string, message: IMessage) {
     const payload = {
-      data: {
-        message
-      },
+      data: { ...message },
       token
     }
 
