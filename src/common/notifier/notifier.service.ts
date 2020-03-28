@@ -12,7 +12,7 @@ export class NotifierService {
       "type": this.configService.get('FIREBASE_TYPE'),
       "project_id": this.configService.get('FIREBASE_PROJECT_ID'),
       "private_key_id": this.configService.get('FIREBASE_PRIVATE_KEY_ID'),
-      "private_key": this.configService.get('FIREBASE_PRIVATE_KEY'),
+      "private_key": this.configService.get('FIREBASE_PRIVATE_KEY').replace(/\\n/g, '\n'),
       "client_email": this.configService.get('FIREBASE_CLIENT_EMAIL'),
       "client_id": this.configService.get('FIREBASE_CLIENT_ID'),
       "auth_uri": this.configService.get('FIREBASE_AUTH_URI'),
