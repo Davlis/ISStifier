@@ -27,7 +27,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content miscellaneous-variables">
+               <div class="content class">
                    <div class="content-data">
 
 
@@ -40,91 +40,82 @@
 
 
 
-
-
-
-                   
-
 <ol class="breadcrumb">
-  <li>Miscellaneous</li>
-  <li>Variables</li>
+  <li>Classes</li>
+  <li>CreateUserDto</li>
 </ol>
 
-<section>
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/user/dto/create-user.dto.ts</code>
+        </p>
+
+
+
+
+
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <ul class="index-list">
-                        <li>
-                            <a href="#ConfigSchema" title="src/config/config.schema.ts"><b>ConfigSchema</b>&nbsp;&nbsp;&nbsp;(src/.../config.schema.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#Feature" title="src/user/user.module.ts"><b>Feature</b>&nbsp;&nbsp;&nbsp;(src/.../user.module.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#UserSchema" title="src/user/schemas/user.schema.ts"><b>UserSchema</b>&nbsp;&nbsp;&nbsp;(src/.../user.schema.ts)</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#deviceId">deviceId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#pushToken">pushToken</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+
         </tbody>
     </table>
 </section>
 
-    <h3>src/config/config.schema.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="ConfigSchema"></a>
+                        <a name="deviceId"></a>
                         <span class="name">
                             <b>
-                            ConfigSchema</b>
-                            <a href="#ConfigSchema"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>Joi.object({
-  NODE_ENV: Joi.string()
-    .valid(&#x27;development&#x27;, &#x27;production&#x27;, &#x27;test&#x27;, &#x27;provision&#x27;)
-    .default(&#x27;development&#x27;),
-
-  PORT: Joi.number().default(3000),
-
-  FIREBASE_TYPE: Joi.string().required(),
-  FIREBASE_PROJECT_ID: Joi.string().required(),
-  FIREBASE_PRIVATE_KEY_ID: Joi.string().required(),
-  FIREBASE_PRIVATE_KEY: Joi.string().required(),
-  FIREBASE_CLIENT_EMAIL: Joi.string().required(),
-  FIREBASE_CLIENT_ID: Joi.string().required(),
-  FIREBASE_AUTH_URI: Joi.string().required(),
-  FIREBASE_TOKEN_URI: Joi.string().required(),
-  FIREBASE_AUTH_PROVIDER_X509_CERT_URL: Joi.string().required(),
-  FIREBASE_CLIENT_X509_CERT_URL: Joi.string().required(),
-})</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
-    <h3>src/user/user.module.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="Feature"></a>
-                        <span class="name">
-                            <b>
-                            Feature</b>
-                            <a href="#Feature"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Readonly</span>
+                            deviceId</b>
+                            <a href="#deviceId"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -136,41 +127,88 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;User&#x27;</code>
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @IsString()<br />
+                            </code>
                         </td>
                     </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/user/dto/create-user.dto.ts:5</a></div>
+                            </td>
+                        </tr>
 
 
             </tbody>
         </table>
-</section>
-    <h3>src/user/schemas/user.schema.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
+        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="UserSchema"></a>
+                        <a name="pushToken"></a>
                         <span class="name">
                             <b>
-                            UserSchema</b>
-                            <a href="#UserSchema"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Readonly</span>
+                            pushToken</b>
+                            <a href="#pushToken"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>new mongoose.Schema({
-  deviceId: String,
-  pushToken: String
-})</code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
                         </td>
                     </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @IsString()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/user/dto/create-user.dto.ts:8</a></div>
+                            </td>
+                        </tr>
 
 
             </tbody>
         </table>
 </section>
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IsString } from &#x27;class-validator&#x27;;
+
+export class CreateUserDto {
+  @IsString()
+  readonly deviceId: string
+
+  @IsString()
+  readonly pushToken: string
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
 
 
 
@@ -190,8 +228,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
-            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'CreateUserDto.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
